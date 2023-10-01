@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  node:
+    build:
+      context: ../.
+      dockerfile: build/node/Dockerfile
+    container_name: telemedicine-frontend
