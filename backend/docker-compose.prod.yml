@@ -28,7 +28,7 @@ services:
     depends_on:
       - db
   nginx:
-    build: ./nginx
+    build: .build/nginx
     volumes:
       - web-root:/var/www/html
       - static_volume:/home/app/web/staticfiles
