@@ -10,16 +10,16 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
+COPY ../../requirements.txt .
 RUN cat requirements.txt
 RUN pip install -r requirements.txt
 
 # copy project
-COPY ./entrypoint.sh .
+COPY ../../entrypoint.sh .
 RUN sed -i 's/\r$//g' /usr/src/app/entrypoint.sh
 RUN chmod +x /usr/src/app/entrypoint.sh
 
-COPY . .
+COPY ../.. .
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 #FROM python:3.9.2
 #
