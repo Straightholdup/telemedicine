@@ -5,4 +5,13 @@ services:
     container_name: telemedicine-api
 
   db:
+    image: postgres:13.0-alpine
     container_name: telemedicine-db
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - ${DB_HOST_PATH}:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
