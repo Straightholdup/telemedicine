@@ -3,22 +3,17 @@ version: '3.9'
 services:
   web:
     build:
-      context: ..
-      dockerfile: .build/python/Dockerfile
+      target: dev
     command: python manage.py runserver 0.0.0.0:8000
-    ports:
-      - ${EXTERNAL_PORT}:8000
     volumes:
       - .:/app
-    env_file:
-      - .env
     depends_on:
       - db
 
   db:
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
-      interval: 5s
+      interval: 30s
       timeout: 5s
       retries: 5
 

@@ -3,6 +3,13 @@ version: "3.9"
 services:
   web:
     container_name: telemedicine-api
+    build:
+      context: ../
+      dockerfile: .build/python/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${EXTERNAL_PORT}:8000
 
   db:
     image: postgres:13.0-alpine

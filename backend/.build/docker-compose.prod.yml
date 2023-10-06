@@ -3,18 +3,11 @@ version: '3.9'
 services:
   web:
     build:
-      context: ..
-      dockerfile: .build/python/Dockerfile.prod
+      target: prod
     command: gunicorn telemedecine.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - static_volume:/home/app/web/staticfiles
-      - media_volume:/home/app/web/mediafiles
-    ports:
-      - "80:8000"
-    env_file:
-      - ../.env.prod
-    expose:
-      - 8000
+      - ${MEDIA_FILES_PATH}:/home/app/web/mediafiles
+      - ${STATIC_FILES_PATH}:/home/app/web/staticfiles
     networks:
       - app-network
 
