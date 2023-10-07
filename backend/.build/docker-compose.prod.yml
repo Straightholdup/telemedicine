@@ -13,14 +13,14 @@ services:
   nginx:
     build: nginx
     volumes:
-      - web-root:/var/www/html
-      - static_volume:/home/app/web/staticfiles
-      - media_volume:/home/app/web/mediafiles
+      - ${WEB_ROOT_PATH}:/var/www/html
+      - ${STATIC_FILES_PATH}:/home/app/web/staticfiles
+      - ${MEDIA_FILES_PATH}:/home/app/web/mediafiles
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
     ports:
-      - "1337:80"
+      - ${EXTERNAL_NGINX_PORT}:80
     depends_on:
       - web
     networks:
@@ -32,7 +32,7 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-      - web-root:/var/www/html
+      - ${WEB_ROOT_PATH}:/var/www/html
     depends_on:
       - nginx
     command: certonly --webroot --webroot-path=/var/www/html --email biba4756@gmail.com --agree-tos --no-eff-email --staging -d server.online-medicine.kz  -d www.server.online-medicine.kz
