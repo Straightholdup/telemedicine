@@ -95,7 +95,14 @@ WSGI_APPLICATION = 'telemedecine.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db()
+    'default': {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": os.environ.get("DB_PORT"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+    }
 }
 AUTH_USER_MODEL = 'auth_.MainUser'
 REST_FRAMEWORK = {
