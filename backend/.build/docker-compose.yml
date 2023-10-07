@@ -4,8 +4,11 @@ services:
   web:
     container_name: telemedicine-api
     build:
-      context: ../
+      context: ..
       dockerfile: .build/python/Dockerfile
+      args:
+        - USER_UID
+        - USER_NAME
     env_file:
       - .env
     ports:

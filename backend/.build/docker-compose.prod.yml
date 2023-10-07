@@ -4,7 +4,6 @@ services:
   web:
     build:
       target: prod
-    command: gunicorn telemedecine.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ${MEDIA_FILES_PATH}:/home/app/web/mediafiles
       - ${STATIC_FILES_PATH}:/home/app/web/staticfiles

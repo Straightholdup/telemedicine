@@ -4,9 +4,8 @@ services:
   web:
     build:
       target: dev
-    command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/app
+      - ..:/app
     depends_on:
       - db
 
