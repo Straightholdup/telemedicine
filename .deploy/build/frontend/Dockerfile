@@ -9,6 +9,6 @@ RUN set -eux; \
     apk add --no-cache bash; \
     npm install;
 
-COPY . .
+COPY frontend/ .
 
 ENTRYPOINT [ "npm", "start" ]

@@ -1,16 +1,38 @@
 version: "3.9"
 services:
   api:
+    container_name: telemedicine-api
     build:
       context: ..
       dockerfile: .deploy/build/api/Dockerfile
+      args:
+        - USER_UID
+        - USER_NAME
+    env_file:
+      - .env
+    ports:
+      - ${EXTERNAL_PORT}:8000
 
   frontend:
+    container_name: telemedicine-frontend
     build:
       context: ..
       dockerfile: .deploy/build/frontend/Dockerfile
 
+  psql:
+    image: postgres:13.0-alpine
+    container_name: telemedicine-db
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - ${DB_HOST_PATH}:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+
   gateway:
+    container_name: telemedicine-gateway
     build:
       context: ..
       dockerfile: .deploy/build/gateway/Dockerfile

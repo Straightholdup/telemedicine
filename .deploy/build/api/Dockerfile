@@ -35,7 +35,7 @@ RUN pip install --upgrade pip &&  \
     pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt && \
     pip install --no-cache /app/wheels/*
 
-COPY . .
+COPY ../../../backend/.build/python .
 
 USER ${USER_NAME}:${USER_NAME}
 
