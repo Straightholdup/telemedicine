@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: .deploy/build/api/Dockerfile
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: .deploy/build/frontend/Dockerfile
+
+  gateway:
+    build:
+      context: ..
+      dockerfile: .deploy/build/gateway/Dockerfile
