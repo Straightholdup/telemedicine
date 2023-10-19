@@ -1,11 +1,13 @@
 version: '3.9'
 
 services:
-  web:
+  api:
     build:
       target: dev
+      context: ../backend
+      dockerfile: ../.deploy/build/api/Dockerfile
     volumes:
-      - ..:/app
+      - ../backend:/app
     depends_on:
       - db
 

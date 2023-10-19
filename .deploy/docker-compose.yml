@@ -3,8 +3,6 @@ services:
   api:
     container_name: telemedicine-api
     build:
-      context: ..
-      dockerfile: .deploy/build/api/Dockerfile
       args:
         - USER_UID
         - USER_NAME
