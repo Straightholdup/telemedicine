@@ -20,7 +20,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 WORKDIR /app
 
-COPY ./requirements.txt .
+COPY requirements.txt .
 
 FROM base as dev
 
