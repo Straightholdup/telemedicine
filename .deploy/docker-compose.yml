@@ -15,9 +15,6 @@ services:
 
   frontend:
     container_name: telemedicine-frontend
-    build:
-      context: ..
-      dockerfile: .deploy/build/frontend/Dockerfile
 
   psql:
     image: postgres:13.0-alpine

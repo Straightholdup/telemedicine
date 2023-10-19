@@ -16,5 +16,12 @@ services:
       timeout: 5s
       retries: 5
 
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../.deploy/build/frontend/Dockerfile
+    volumes:
+      - ../frontend:/app
+
 volumes:
   postgres_data:
