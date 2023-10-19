@@ -17,3 +17,13 @@ dev-build: init-env $(DOCKER_BASE) $(DOCKER_DEV)
 	docker compose \
     	-f $(DOCKER_BASE) \
     	-f $(DOCKER_DEV) build
+
+prod-run: $(DOCKER_BASE) $(DOCKER_PROD)
+	docker compose \
+    	-f $(DOCKER_BASE) \
+    	-f $(DOCKER_PROD) up -d
+
+prod-build: init-env $(DOCKER_BASE) $(DOCKER_PROD)
+	docker compose \
+		-f $(DOCKER_BASE) \
+		-f $(DOCKER_PROD) build
