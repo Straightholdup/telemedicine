@@ -1,9 +1,9 @@
-up-dev:
+dev-run:
 	docker compose \
 		-f .deploy/docker-compose.yml \
 		-f .deploy/docker-compose.dev.yml up
 
-build-dev:
+dev-build:
 	docker compose \
 		-f .deploy/docker-compose.yml \
 		-f .deploy/docker-compose.dev.yml build
