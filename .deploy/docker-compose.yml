@@ -25,9 +25,3 @@ services:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-
-  gateway:
-    container_name: telemedicine-gateway
-    build:
-      context: ..
-      dockerfile: .deploy/build/gateway/Dockerfile
