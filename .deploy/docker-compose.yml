@@ -1,11 +1,8 @@
 version: "3.9"
-
 services:
-  web:
+  api:
     container_name: telemedicine-api
     build:
-      context: ..
-      dockerfile: .build/python/Dockerfile
       args:
         - USER_UID
         - USER_NAME
@@ -14,9 +11,12 @@ services:
     ports:
       - ${EXTERNAL_PORT}:8000
 
-  db:
+  frontend:
+    container_name: telemedicine-frontend
+
+  psql:
     image: postgres:13.0-alpine
-    container_name: telemedicine-db
+    container_name: telemedicine-psql
     ports:
       - ${DB_PORT}:5432
     volumes:
