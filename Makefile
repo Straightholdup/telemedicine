@@ -8,12 +8,12 @@ init-env:
     	$(shell cp $(BUILD_PATH)/.env.example $(BUILD_PATH)/.env)
     endif
 
-dev-run:
+dev-run: $(DOCKER_BASE) $(DOCKER_DEV)
 	docker compose \
-		-f .deploy/docker-compose.yml \
-		-f .deploy/docker-compose.dev.yml up
+		-f $(DOCKER_BASE) \
+		-f $(DOCKER_DEV) up
 
-dev-build:
+dev-build: init-env $(DOCKER_BASE) $(DOCKER_DEV)
 	docker compose \
-		-f .deploy/docker-compose.yml \
-		-f .deploy/docker-compose.dev.yml build
+    	-f $(DOCKER_BASE) \
+    	-f $(DOCKER_DEV) build
