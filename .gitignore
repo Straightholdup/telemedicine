@@ -1,2 +1,4 @@
 .idea
 .deploy/.env
+
+frontend/node_modules

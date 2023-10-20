@@ -11,7 +11,8 @@ init-env:
 dev-run: $(DOCKER_BASE) $(DOCKER_DEV)
 	docker compose \
 		-f $(DOCKER_BASE) \
-		-f $(DOCKER_DEV) up
+		-f $(DOCKER_DEV) up -d; \
+	docker exec telemedicine-api python manage.py migrate
 
 dev-build: init-env $(DOCKER_BASE) $(DOCKER_DEV)
 	docker compose \
