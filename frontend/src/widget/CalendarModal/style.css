@@ -1,0 +1,82 @@
+.overlay_modal {
+    position: fixed;
+    opacity: 0.5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 111;
+    padding: 16px;
+    background-color: rgba(1, 1, 1, 0.8);
+    overflow: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 11111;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #F0F3F4;
+    border-radius: 16px;
+    animation-name: appear;
+    animation-duration: 200ms;
+}
+.modal-inner {
+    position: relative;
+    width: 1400px;
+    min-height: 600px;
+}
+
+.modal-title{
+    text-align: center;
+    font-size: 30px;
+    color: #0574E1;
+}
+
+.modal-calendar-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.row{
+    text-align: center;
+    color: #892b2b;
+    margin: 10px;
+}
+
+.col{
+    min-width: 150px;
+    color: #21A038;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.col input {
+    margin-right: 15px;
+}
+
+.send-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+
+.modal-button-close {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    outline: 0;
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    cursor: pointer;
+}
