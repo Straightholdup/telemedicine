@@ -2,10 +2,10 @@ import React from "react";
 import {CategoriesItemButton, CategoriesItemsWrapper} from "./styled";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {setDisease,  setSelectionType} from "../../features/CategoriesSlice";
+import {setDisease,  setSelectionType} from "../../../feature/CategoriesSlice";
 import {Medicine} from "../../assets/icons/medicine";
 import {API_URL} from "../../variables";
-import {setAllDoctor} from "../../features/AllDoctorSlice";
+import {setAllDoctor} from "../../../feature/AllDoctorSlice";
 import {showErrorMessage} from "../Notification/TriggerNotification";
 
 export const CategoriesItem = ({dataType}) => {

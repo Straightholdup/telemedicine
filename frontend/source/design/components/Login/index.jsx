@@ -7,7 +7,7 @@ import {Registration} from "./Registration";
 import logo from '../../assets/images/logo.png';
 import {ThemeContext, themes} from "../../context/ThemeContext";
 import {ThemeSwitch} from "../Header/styled";
-import {setThemeMode} from "../../features/CategoriesSlice";
+import {setThemeMode} from "../../../feature/CategoriesSlice";
 import {useDispatch, useSelector} from "react-redux";
 
 const items = [

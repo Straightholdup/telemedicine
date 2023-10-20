@@ -10,7 +10,7 @@ import {
 import {useNavigate} from "react-router-dom";
 import {Avatar} from "../../assets/icons/avatar";
 import {useDispatch, useSelector} from "react-redux";
-import {setLoginType, setThemeMode} from "../../features/CategoriesSlice";
+import {setLoginType, setThemeMode} from "../../../feature/CategoriesSlice";
 import {ThemeContext,themes} from "../../context/ThemeContext";
 
 export const Header = ({setToken}) => {

@@ -18,7 +18,7 @@ import {showErrorMessage, showInfoMessage} from "../Notification/TriggerNotifica
 import {useDispatch, useSelector} from "react-redux";
 import {API_URL} from "../../variables";
 import dayjs from "dayjs";
-import {setRequestId} from "../../features/RequestSlice";
+import {setRequestId} from "../../../feature/RequestSlice";
 
 
 export const Entry = () => {

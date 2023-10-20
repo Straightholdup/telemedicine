@@ -1,11 +1,11 @@
 import React from "react";
 import doctorImage from "../../assets/images/forWho.png";
 import {DoctorTypeItemWrapper} from "./styled";
-import {setDoctorType, setSelectionType} from "../../features/CategoriesSlice";
+import {setDoctorType, setSelectionType} from "../../../feature/CategoriesSlice";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {API_URL} from "../../variables";
-import {setAllDoctor} from "../../features/AllDoctorSlice";
+import {setAllDoctor} from "../../../feature/AllDoctorSlice";
 import {showErrorMessage} from "../Notification/TriggerNotification";
 
 export const DoctorTypesItem = (props) => {

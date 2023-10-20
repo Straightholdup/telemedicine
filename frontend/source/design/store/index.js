@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import mainReducer from "../features/slice";
-import categoriesReducer from "../features/CategoriesSlice";
-import profileReducer from "../features/ProfileSlice";
-import allDoctorReducer from "../features/AllDoctorSlice";
-import requestReducer from "../features/RequestSlice";
+import mainReducer from "../../feature/slice";
+import categoriesReducer from "../../feature/CategoriesSlice";
+import profileReducer from "../../feature/ProfileSlice";
+import allDoctorReducer from "../../feature/AllDoctorSlice";
+import requestReducer from "../../feature/RequestSlice";
 
 
 export const store = configureStore({

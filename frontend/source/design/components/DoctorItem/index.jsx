@@ -2,7 +2,7 @@ import React from "react";
 import {DoctorAvatar, DoctorItemWrapper, ButtonStyled, H4Styled} from "./styled";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {setSelectedDoctor} from "../../features/CategoriesSlice";
+import {setSelectedDoctor} from "../../../feature/CategoriesSlice";
 import {imgSrcHelper} from "../../variables";
 
 

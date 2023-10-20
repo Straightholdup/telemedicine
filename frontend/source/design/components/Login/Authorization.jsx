@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {ButtonStyled, FormStyled, H1Styled, InputStyled} from "./styled";
 import {useDispatch} from "react-redux";
-import {setLoginType} from "../../features/CategoriesSlice";
+import {setLoginType} from "../../../feature/CategoriesSlice";
 import {API_URL} from "../../variables";
-import {setProfileData} from "../../features/ProfileSlice";
+import {setProfileData} from "../../../feature/ProfileSlice";
 import {showErrorMessage, showSuccessMessage} from "../Notification/TriggerNotification";
 
 export const Authorization = ({setToken}) => {
