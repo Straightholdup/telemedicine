@@ -1,0 +1,107 @@
+.snackbar-container {
+    width: 300px;
+    height: 110px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0574E1;
+    position: relative;
+}
+
+.snackbar-icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1rem;
+    transition: all 0.2s linear;
+}
+
+.error-snackbar-icon {
+    width: 30px;
+    height: 20px;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.info-snackbar-icon {
+    width: 30px;
+    height: 20px;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    background-color: #2b89e9;
+}
+
+.success-snackbar-icon {
+    width: 30px;
+    height: 20px;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    background-color: #4cd16d;
+}
+
+.warning-snackbar-icon {
+    width: 30px;
+    height: 20px;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+}
+
+#snackbar-fixed-container {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    z-index: 1111;
+    transition: all 0.2s linear;
+}
+
+#close-snackbar-icon {
+    position: absolute;
+    top: 13%;
+    right: 5%;
+    z-index: 11;
+}
+
+.notification_sub_container_content_top_card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.notification_sub_container_content_top_card-text {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.notification__bottom--name {
+    margin: 20px auto;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.notification__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification__topBar--btn {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 728px) {
+    .snackbar-container {
+        width: auto;
+        transition: all 0.2s linear;
+    }
+}
