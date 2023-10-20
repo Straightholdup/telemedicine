@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import {Profile} from "../../components/Profile";
+import {Profile} from "../../design/components/Profile";
 import {useSelector} from "react-redux";
-import {ProfileDoctor} from "../../components/ProfileDoctor";
+import {ProfileDoctor} from "../../design/components/ProfileDoctor";
 
 export const ProfilePage = () => {
 

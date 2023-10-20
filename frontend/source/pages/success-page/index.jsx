@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {SuccessEntry} from "../../components/SuccessEntry";
+import {SuccessEntry} from "../../design/components/SuccessEntry";
 
 export const SuccessPage = () => {
     useEffect(() => {

@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import {ListOfDoctorByDisease} from "../../components/ListOfDoctorByDisease";
-import {Help} from "../../components/Help";
-import {ButtonStyled} from "../../components/Entry/styled";
-import {Arrow} from "../../assets/icons/arrow";
+import {ListOfDoctorByDisease} from "../../design/components/ListOfDoctorByDisease";
+import {Help} from "../../design/components/Help";
+import {ButtonStyled} from "../../design/components/Entry/styled";
+import {Arrow} from "../../app/assets/icons/arrow";
 import {useNavigate} from "react-router-dom";
 
 export const SelectDoctorPage = () => {

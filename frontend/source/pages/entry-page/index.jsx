@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import {Entry} from "../../components/Entry";
+import {Entry} from "../../design/components/Entry";
 import {useNavigate} from "react-router-dom";
-import {Arrow} from "../../assets/icons/arrow";
-import {ButtonStyled} from "../../components/Entry/styled";
+import {Arrow} from "../../app/assets/icons/arrow";
+import {ButtonStyled} from "../../design/components/Entry/styled";
 
 
 export const EntryPage = () => {

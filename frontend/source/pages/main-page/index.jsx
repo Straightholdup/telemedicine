@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import {Greetings} from "../../components/Greetings";
-import {Help} from "../../components/Help";
-import {Benefits} from "../../components/Benefits";
-import {ForWho} from "../../components/ForWho";
-import {Categories} from "../../components/Categories";
-import {DoctorTypes} from "../../components/DoctorTypes";
+import {Greetings} from "../../design/components/Greetings";
+import {Help} from "../../design/components/Help";
+import {Benefits} from "../../design/components/Benefits";
+import {ForWho} from "../../design/components/ForWho";
+import {Categories} from "../../design/components/Categories";
+import {DoctorTypes} from "../../design/components/DoctorTypes";
 import {useSelector} from "react-redux";
 
 export const MainPage = () => {
